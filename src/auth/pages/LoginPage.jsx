@@ -1,11 +1,10 @@
 import { Google } from "@mui/icons-material";
 import { Alert, Button, Grid, Link, TextField, Typography } from "@mui/material";
-import React, { useEffect } from "react";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
-import { checkingAuthentication, startGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth";
+import { startGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth";
 import { AuthLayout } from "../layout/AuthLayout";
 
 export const LoginPage = () => {
@@ -29,7 +28,7 @@ export const LoginPage = () => {
 
   return (
     <AuthLayout title="Login">
-      <form onSubmit={onSubmit}>
+      <form className="animate__animated animate__fadeIn animate__faster" onSubmit={onSubmit}>
         <Grid container>
           <Grid item xs={12} sx={{ mb: 2 }}>
             <TextField
